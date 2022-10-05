@@ -9,7 +9,7 @@ function r1() {
         {
             if( client.responseText != '' )
             {
-                var txt = client.responseText.split("\n");
+                let txt = client.responseText.split("\n");
                 let linenum = Math.floor(Math.random() * 1960) + 1;
                 let combo = (txt[linenum]);
                 document.getElementById("wintotal").innerHTML = ("State: "+combo);
@@ -19,14 +19,14 @@ function r1() {
 }
       function r2() {
         let i = 1;
-        var client = new XMLHttpRequest();
-        client.open('GET', '/resc/names.txt');
-        client.onreadystatechange = function()
+        var client2 = new XMLHttpRequest();
+        client2.open('GET', '/resc/names.txt');
+        client2.onreadystatechange = function()
         {
-            if( client.responseText != '' && i == 1)
+            if( client2.responseText != '' && i == 1)
             {
                 let prev = document.getElementById("wintotal").innerHTML;
-                var txt = client.responseText.split("\n");
+                let txt = client2.responseText.split("\n");
                 let linenum = Math.floor(Math.random() * 2999) + 1;
                 let linenum2 = Math.floor(Math.random() * 2999) + 1;
                 let combo = (txt[linenum]+' '+txt[linenum2]);
@@ -34,5 +34,5 @@ function r1() {
                 let i = 2;
             }
         }
-        client.send();
+        client2.send();
     }

@@ -1,4 +1,4 @@
-function readfileautomatically () {
+function readfileautomatically() {
         var client = new XMLHttpRequest();
         client.open('GET', 'states.txt');
         client.onreadystatechange = function()

@@ -12,6 +12,7 @@ function readfileautomatically() {
             }
         }
         client.send();
+        var client = new XMLHttpRequest();
         client.open('GET', '/resc/names.txt');
         client.onreadystatechange = function()
         {

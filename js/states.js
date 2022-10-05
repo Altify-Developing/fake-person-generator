@@ -11,7 +11,6 @@ function readfileautomatically() {
                 document.getElementById("wintotal").innerHTML = ("State: "+combo);
             }
         }
-        client.send();
         client.open('GET', '/resc/names.txt');
         client.onreadystatechange = function()
         {

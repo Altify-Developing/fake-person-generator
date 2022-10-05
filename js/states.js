@@ -8,7 +8,7 @@ function readfileautomatically() {
                 var txt = client.responseText.split("\n");
                 let linenum = Math.floor(Math.random() * 1960) + 1;
                 let combo = (txt[linenum]);
-                document.getElementById("wintotal").innerHTML = (combo);
+                document.getElementById("wintotal").innerHTML = ("State: "+combo);
             }
         }
         client.send();

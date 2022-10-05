@@ -11,18 +11,20 @@ function readfileautomatically() {
                 document.getElementById("wintotal").innerHTML = ("State: "+combo);
             }
         }
-        client.open('GET', '/resc/names.txt');
-        client.onreadystatechange = function()
+        client.send();
+        var client2 = new XMLHttpRequest();
+        client2.open('GET', '/resc/names.txt');
+        client2.onreadystatechange = function()
         {
-            if( client.responseText != '' )
+            if( client2.responseText != '' )
             {
                 let prev = document.getElementById("wintotal").innerHTML;
-                var txt = client.responseText.split("\n");
+                var txt = client2.responseText.split("\n");
                 let linenum = Math.floor(Math.random() * 2999) + 1;
                 let linenum2 = Math.floor(Math.random() * 2999) + 1;
                 let combo = (txt[linenum]+' '+txt[linenum2]);
                 document.getElementById("wintotal").innerHTML = (prev+" | Name: "+combo);
             }
         }
-        client.send();
+        client2.send();
     }

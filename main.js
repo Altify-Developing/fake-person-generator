@@ -1,6 +1,6 @@
 function readfileautomatically() {
         var client = new XMLHttpRequest();
-        client.open('GET', 'states.txt');
+        client.open('GET', '/states.txt');
         client.onreadystatechange = function()
         {
             if( client.responseText != '' )
@@ -8,7 +8,7 @@ function readfileautomatically() {
                 var txt = client.responseText.split("\n");
                 let linenum = Math.floor(Math.random() * 2) + 1;
                 let combo = (txt[linenum]);
-                document.getElementById("combo").innerHTML = (combo);
+                document.getElementById("wintotal").innerHTML = (combo);
                 alert(combo);
             }
         }

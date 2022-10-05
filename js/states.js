@@ -1,3 +1,7 @@
+function start() {
+        setTimeout(r1, 1);
+        setTimeout(r2, 10);
+}
 function r1() {
         var client = new XMLHttpRequest();
         client.open('GET', '/resc/states.txt');

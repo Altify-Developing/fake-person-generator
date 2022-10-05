@@ -1,6 +1,6 @@
 function readfileautomatically() {
         var client = new XMLHttpRequest();
-        client.open('GET', '/states.txt');
+        client.open('GET', '/resc/states.txt');
         client.onreadystatechange = function()
         {
             if( client.responseText != '' )

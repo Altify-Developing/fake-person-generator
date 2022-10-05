@@ -19,10 +19,10 @@ function readfileautomatically() {
             if( client2.responseText != '' )
             {
                 let prev = document.getElementById("wintotal").innerHTML;
-                var txt = client2.responseText.split("\n");
+                var txt2 = client2.responseText.split("\n");
                 let linenum = Math.floor(Math.random() * 2999) + 1;
                 let linenum2 = Math.floor(Math.random() * 2999) + 1;
-                let combo = (txt[linenum]+' '+txt[linenum2]);
+                let combo = (txt2[linenum]+' '+txt2[linenum2]);
                 document.getElementById("wintotal").innerHTML = (prev+" | Name: "+combo);
             }
         }

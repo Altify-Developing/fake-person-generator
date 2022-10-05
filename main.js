@@ -9,7 +9,6 @@ function readfileautomatically() {
                 let linenum = Math.floor(Math.random() * 1960) + 1;
                 let combo = (txt[linenum]);
                 document.getElementById("wintotal").innerHTML = (combo);
-                alert(combo);
             }
         }
         client.send();

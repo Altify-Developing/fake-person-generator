@@ -18,11 +18,12 @@ function r1() {
         client.send();
 }
       function r2() {
+        let i = 1;
         var client = new XMLHttpRequest();
         client.open('GET', '/resc/names.txt');
         client.onreadystatechange = function()
         {
-            if( client.responseText != '' )
+            if( client.responseText != '' && i == 1)
             {
                 let prev = document.getElementById("wintotal").innerHTML;
                 var txt = client.responseText.split("\n");
@@ -30,6 +31,7 @@ function r1() {
                 let linenum2 = Math.floor(Math.random() * 2999) + 1;
                 let combo = (txt[linenum]+' '+txt[linenum2]);
                 document.getElementById("wintotal").innerHTML = (prev+" | Name: "+combo);
+                let i = 2;
             }
         }
         client.send();

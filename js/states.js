@@ -16,9 +16,9 @@ function readfileautomatically() {
         client2.open('GET', '/resc/names.txt');
         client2.onreadystatechange = function()
         {
+        let prev = document.getElementById("wintotal").innerHTML;
             if( client2.responseText != '' )
             {
-                let prev = document.getElementById("wintotal").innerHTML;
                 var txt2 = client2.responseText.split("\n");
                 let linenum = Math.floor(Math.random() * 2999) + 1;
                 let linenum2 = Math.floor(Math.random() * 2999) + 1;

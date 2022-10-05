@@ -1,4 +1,4 @@
-function readfileautomatically() {
+function r1() {
         var client = new XMLHttpRequest();
         client.open('GET', '/resc/states.txt');
         client.onreadystatechange = function()
@@ -12,6 +12,8 @@ function readfileautomatically() {
             }
         }
         client.send();
+}
+      function r2() {
         var client = new XMLHttpRequest();
         client.open('GET', '/resc/names.txt');
         client.onreadystatechange = function()
